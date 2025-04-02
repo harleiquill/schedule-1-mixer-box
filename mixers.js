@@ -371,6 +371,7 @@ function draw() {
   fill(218, 165, 32);
   text("harleiquill's Mixing Calculator", width / 2, 10);
   textSize(12);
+  text("Schedule 1 - Available on Steam", width /2, 40);
   fill(255);
 
   // Base Drug
