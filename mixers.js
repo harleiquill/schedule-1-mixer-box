@@ -6,6 +6,7 @@ let itemDropdown;
 let mixerList = [];
 let resultBox;
 let baseProduct;
+let markePrice = 0;
 
 let baseDrugs = {
     "OG Kush": ["calming"],
@@ -64,6 +65,35 @@ let baseProducts = {
   "Viagra": "tropic thunder",
   "Mega Bean": "foggy",
   "Iodine": "jennerising"
+};
+
+let traitValues = {
+  "shrinking": 0.6,
+  "zombifying": 0.58,
+  "cyclopean": 0.56,
+  "anti-gravity": 0.54,
+  "long faced": 0.52,
+  "electrifying": 0.5,
+  "glowing": 0.48,
+  "tropic thunder": 0.46,
+  "thought-provoking": 0.44,
+  "jennerising": 0.42,
+  "bright-eyed": 0.4,
+  "spicy": 0.38,
+  "foggy": 0.36,
+  "slippery": 0.34,
+  "athletic": 0.32,
+  "balding": 0.3,
+  "calorie-dense": 0.28,
+  "sedating": 0.26,
+  "sneaky": 0.24,
+  "energizing": 0.22,
+  "gingeritis": 0.2,
+  "euphoric": 0.18,
+  "focused": 0.16,
+  "refreshing": 0.14,
+  "munchies": 0.12,
+  "calming": 0.1
 };
 
 let items = {
@@ -406,6 +436,11 @@ function draw() {
   text("Total Cost per Unit:", width / 2 - 10, costY + 30);
   textAlign(LEFT, TOP);
   text("$" + totalCost.toFixed(2), width / 2 + 10, costY + 30);
+  textAlign(RIGHT, TOP);
+  text("Estimated Market Price:", width / 2 - 10, costY + 50);
+  textAlign(LEFT, TOP);
+  text("$" + marketPrice.toFixed(2), width / 2 + 10, costY + 50);
+
 
   noStroke();
 
